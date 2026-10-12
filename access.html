@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>アクセス・ご予約 — Feuille（フォイユ）</title>
+<meta name="description" content="Feuille（フォイユ）のアクセスとご予約。沖縄県那覇市。営業時間 10:00〜19:00（火曜定休）。">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Feuille</a>
+    <button class="nav-toggle" type="button" id="nav-toggle"
+            aria-expanded="false" aria-controls="nav-menu" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="nav-menu" aria-label="メインナビゲーション">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="staff.html">Staff</a>
+      <a href="access.html" aria-current="page">Access</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">Access &amp; Reservation</p>
+    <h1>アクセス・ご予約</h1>
+    <p class="lead">完全予約制です。当日のご予約はメールにてお問い合わせください。</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="access-label">
+      <h2 class="label" id="access-label">Access</h2>
+      <div class="panel reveal">
+        <dl class="info-list">
+          <div><dt>所在地</dt><dd>沖縄県那覇市</dd></div>
+          <div><dt>営業時間</dt><dd>10:00〜19:00</dd></div>
+          <div><dt>定休日</dt><dd>火曜日</dd></div>
+          <div><dt>ご予約</dt><dd><a href="mailto:hello.heroworks@gmail.com">hello.heroworks@gmail.com</a></dd></div>
+        </dl>
+      </div>
+
+      <div class="map reveal">
+        <iframe
+          src="https://maps.google.com/maps?q=26.2124,127.6809&amp;z=15&amp;output=embed"
+          title="Feuille の所在地（沖縄県那覇市）周辺の地図"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section id="reserve" aria-labelledby="reserve-label">
+      <h2 class="label" id="reserve-label">Reservation</h2>
+      <form class="form reveal" id="reserve-form" novalidate>
+        <div class="field">
+          <label for="f-name">お名前</label>
+          <input type="text" id="f-name" name="name" placeholder="仲村 花子" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-date">ご希望日時</label>
+          <input type="datetime-local" id="f-date" name="datetime" required>
+        </div>
+        <div class="field">
+          <label for="f-menu">ご希望メニュー</label>
+          <select id="f-menu" name="menu" required>
+            <option value="">選択してください</option>
+            <option>カット（4,500円〜）</option>
+            <option>カラー（8,000円〜）</option>
+            <option>トリートメント（3,000円〜）</option>
+            <option>パーマ（9,000円〜）</option>
+            <option>ヘッドスパ（3,500円〜）</option>
+            <option>相談しながら決めたい</option>
+          </select>
+        </div>
+        <button type="submit">予約を申し込む</button>
+        <p class="form-result" id="form-result" hidden role="status"></p>
+        <p class="form-note">※ デモサイトのため、送信は行われません。</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Feuille</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
